@@ -1,0 +1,59 @@
+# Settings for the mod. RecompModTool reads this to make the .nrm file.
+
+[manifest]
+
+# Your mod's ID. Make it unique so it never matches another mod.
+id = "snp_health_regen"
+
+version = "1.0.0"
+
+# Shown in the Mods menu.
+display_name = "Health Regen"
+description = """
+Example mod for the Sin and Punishment recomp. \
+While you're hurt, your health slowly fills back up.
+
+Template: https://github.com/wootbeer/snprecomp-mod-template"""
+short_description = "Health slowly fills back up."
+
+authors = [ "Your name here" ]
+
+# The game this mod is for. Leave this as "snp".
+game_id = "snp"
+
+# Lowest snprecomp version this mod works on.
+minimum_recomp_version = "0.2.7"
+
+# Other mods this one needs, like "modname:1.0.0".
+dependencies = []
+optional_dependencies = []
+
+native_libraries = []
+
+[inputs]
+
+# Made by `make`.
+elf_path = "build/mod.elf"
+
+# Name of the .nrm file.
+mod_filename = "snp_health_regen"
+
+# The game's function list. RECOMP_HOOK and RECOMP_PATCH names must be in here.
+func_reference_syms_file = "syms/snp.jp.syms.toml"
+data_reference_syms_files = []
+
+# Other files to put in the .nrm, like a thumb.png.
+additional_files = []
+
+# Options shown in the Mods menu. Read them with recomp_get_config_u32.
+[[manifest.config_options]]
+id = "regen_frames"
+name = "Regen Speed"
+description = "Frames between each point of health. Lower is faster."
+type = "Number"
+min = 1
+max = 120
+step = 1
+precision = 0
+percent = false
+default = 30

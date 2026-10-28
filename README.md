@@ -31,6 +31,7 @@ Open the Mods tab in the recomp and drop the `.nrm` file in. Turn the mod on and
 | `include/modding.h` | `RECOMP_HOOK`, `RECOMP_PATCH` and the rest. Don't edit. |
 | `include/recompconfig.h` | Read your mod's options. |
 | `include/recomputils.h` | Memory and dependency helpers. |
+| `thumb.png` | The picture in the Mods menu. Replace it with your own. |
 | `syms/snp.jp.syms.toml` | Every game function's name and address. Copied from snprecomp's `SnPSyms/`. |
 
 ## Making Your Own Mod
@@ -63,6 +64,9 @@ snprecomp already changes these. Hooking or patching them will undo snprecomp's 
 - Hooked: `func_80025CA4` `func_80025E44` `func_80029070` `func_8002BCE0` `func_80032AA0` `func_80032F2C` `func_80033128` `func_80033170` `func_80033758` `func_80033A40` `func_80033AC4` `func_80034054` `func_8003A5F0` `func_8003A9CC` `func_8003C0D0` `func_8004D7B0` `func_8004E4A0` `func_8004E640` `func_80052064` `func_80054B64` `func_800AB924` `func_800D42F8` `guMtxF2L`
 
 The list comes from snprecomp's `snp.jp.toml` and `patches/`. Check there if snprecomp gets updated.
+
+### Picture
+The Mods menu shows `thumb.png`. Make your own, keep it square (256x256 is good) and keep the name `thumb.png`.
 
 ### Options
 Options go in `mod.toml` under `[[manifest.config_options]]` and show up in the Mods menu. Read them in code with `recomp_get_config_u32("id")`.

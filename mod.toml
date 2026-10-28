@@ -42,8 +42,9 @@ mod_filename = "snp_health_regen"
 func_reference_syms_file = "syms/snp.jp.syms.toml"
 data_reference_syms_files = []
 
-# Other files to put in the .nrm, like a thumb.png.
-additional_files = []
+# Other files to put in the .nrm.
+# thumb.png is the picture shown in the Mods menu.
+additional_files = [ "thumb.png" ]
 
 # Options shown in the Mods menu. Read them with recomp_get_config_u32.
 [[manifest.config_options]]

@@ -23,8 +23,8 @@ Or skip all that: push to GitHub and the Build action makes the `.nrm` for you. 
 
 ## Making a Release
 1. Change `version` in `mod.toml` and the text in `release_notes.md`.
-2. Push a tag with the same version, like `git tag v1.0.0` then `git push origin v1.0.0`.
-3. The Build action makes a release with the `.nrm` on it.
+2. Push to `main`.
+3. The Build action makes a release with the `.nrm` on it. If that version already has a release, it skips it.
 
 ## Installing
 Open the Mods tab in the recomp and drop the `.nrm` file in. Turn the mod on and start the game.

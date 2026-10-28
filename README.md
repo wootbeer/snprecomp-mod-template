@@ -4,6 +4,8 @@ A mod template for the [Sin and Punishment recomp](https://github.com/wootbeer/s
 
 The example mod is **Health Regen**: while you're hurt, your health slowly fills back up. You can set the speed in the Mods menu.
 
+**Just want to play it?** Get `snp_health_regen.nrm` from [Releases](https://github.com/wootbeer/snprecomp-mod-template/releases), then see [Installing](#installing).
+
 Copy this repo, change the code in `src/` and the info in `mod.toml`, and you have your own mod.
 
 ## What You Need
@@ -18,6 +20,11 @@ Copy this repo, change the code in `src/` and the info in `mod.toml`, and you ha
 2. Your mod is `build/snp_health_regen.nrm`.
 
 Or skip all that: push to GitHub and the Build action makes the `.nrm` for you. Get it from the run's Artifacts.
+
+## Making a Release
+1. Change `version` in `mod.toml` and the text in `release_notes.md`.
+2. Push a tag with the same version, like `git tag v1.0.0` then `git push origin v1.0.0`.
+3. The Build action makes a release with the `.nrm` on it.
 
 ## Installing
 Open the Mods tab in the recomp and drop the `.nrm` file in. Turn the mod on and start the game.
